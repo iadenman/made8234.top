@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://made8234.top/sitemap.xml
