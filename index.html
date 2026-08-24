@@ -1,147 +1,523 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홈페이지 공사중 안내</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- SEO: Title & Description -->
+    <title>메이드제작나라 | 촬영용 졸업증명서·학력 서류 소품 제작</title>
+    <meta name="description" content="신속하고 정확한 서비스로 전용 졸업증명서, 졸업장 소품 제작 전문 메이드제작나라. 원본발급과 100%동일">
+    <meta name="keywords" content="촬영용 소품 제작업체, 졸업증명서 제작, 졸업장 위조, 영화 소품 제작, 드라마 소품, 비식별 서류 연출, 메이드제작나라, 성적증명서 연출">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://made8234.top/">
+
+    <!-- Open Graph (OG) / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://made8234.top/">
+    <meta property="og:title" content="메이드제작나라 | 촬영용 졸업증명서·서류 소품 전문">
+    <meta property="og:description" content="법적 효력 없는 완벽한 촬영/연출용 비식별 서류 소품 제작. 카카오톡 문의: v444">
+    <meta property="og:site_name" content="메이드제작나라">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:image" content="https://made8234.top/img/gettyimages-940983330.webp">
+    
+    <!-- GEO & Local SEO -->
+    <meta name="geo.region" content="KR-11">
+    <meta name="geo.placename" content="Seoul, Mapo-gu">
+    <meta name="geo.position" content="37.5623;126.9242">
+    <meta name="ICBM" content="37.5623, 126.9242">
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpolyline points='14 2 14 8 20 8'/%3E%3Cline x1='16' y1='13' x2='8' y2='13'/%3E%3Cline x1='16' y1='17' x2='8' y2='17'/%3E%3Cpolyline points='10 9 9 9 8 9'/%3E%3C/svg%3E">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Noto Sans KR Font -->
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        kakao: '#FEE500',
-                        kakaoDark: '#191919',
+                        brand: { 50: '#f0f7ff', 500: '#0284c7', 900: '#0c4a6e', 950: '#032b43' },
+                        kakao: '#FEE500', kakaoDark: '#191919',
                     },
-                    fontFamily: {
-                        sans: ['Noto Sans KR', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Noto Sans KR', 'sans-serif'] }
                 }
             }
         }
     </script>
+
     <style>
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
-        .glow {
-            box-shadow: 0 0 50px -10px rgba(254, 229, 0, 0.25);
+        .watermark-overlay {
+            background-image: repeating-linear-gradient(-45deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.08) 10px, transparent 10px, transparent 20px);
         }
     </style>
+
+    <!-- JSON-LD Structured Data (SEO 통합본) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://made8234.top/#website",
+          "url": "https://made8234.top/",
+          "name": "메이드제작나라",
+          "description": "영화·드라마 촬영용 졸업증명서 및 학력 서류 소품 제작 스튜디오",
+          "publisher": { "@id": "https://made8234.top/#organization" }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://made8234.top/#organization",
+          "name": "메이드제작나라",
+          "url": "https://made8234.top/",
+          "image": "https://made8234.top/img/gettyimages-940983330.webp",
+          "description": "방송, 영화, 광고 촬영을 위한 비식별 가공 서류 연출 소품 제작. 법적 효력 없음.",
+          "telephone": "v444 (카카오톡 ID)",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "마포구 연남동",
+            "addressLocality": "서울특별시",
+            "addressRegion": "Seoul",
+            "addressCountry": "KR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 37.5623,
+            "longitude": 126.9242
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://made8234.top/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "실제 행정기관이나 취업·입학 제출용으로 사용할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "아니요, 절대 불가합니다. 메이드제작나라의 모든 결과물은 영화, 드라마, 광고 등 연출 전용 소품(Props)입니다. 법적 효력이 없으며 비식별 가공 및 무효 표기(VOID)가 적용됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "실제 학교명이나 실명으로 제작할 수 있나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "실제 기관의 공식 문서로 오인되는 것을 방지하기 위해 가공된 학교명, 가명, 난수 번호 등 비식별 정보만을 사용하는 것을 원칙으로 제작합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script type="text/javascript">
+        tocplusTop=200;
+        tocplusLeft=5;
+        tocplusMinimizedImage='http://kr07.tocplus007.com/img/minimized_ko.gif';
+        tocplusHAlign='right';
+        tocplusWidth=180;
+        tocplusHeight=220;
+        tocplusUserName='손님';
+        tocplusFrameColor='#458fff';
+        tocplusFloatingWindow=true;
+        var tocplusHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%"+"3Cscript src='" + tocplusHost + "kr07.tocplus007.com/chatLoader.do?userId=acemall' type='text/javascript'"+"%"+"3E"+"%"+"3C/script"+"%"+"3E"));
+    </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between relative overflow-x-hidden selection:bg-kakao selection:text-kakaoDark">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950">
 
-    <!-- Background Decorative Elements -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-tight text-white block leading-none">메이드제작나라</h1>
+                </div>
+            </a>
 
-    <!-- Header / Status Badge -->
-    <header class="w-full max-w-4xl mx-auto px-6 pt-10 pb-6 flex justify-between items-center z-10">
-        <div class="flex items-center space-x-2">
-            <span class="w-3 h-3 bg-amber-400 rounded-full animate-ping"></span>
-            <span class="text-xs sm:text-sm font-medium tracking-wide text-amber-400 uppercase">Website Under Construction</span>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
+                <a href="#samples" class="hover:text-amber-400 transition-colors focus:text-amber-400 focus:outline-none">샘플 갤러리</a>
+                <a href="#safety" class="hover:text-amber-400 transition-colors focus:text-amber-400 focus:outline-none">안전 제작 원칙</a>
+                <a href="#process" class="hover:text-amber-400 transition-colors focus:text-amber-400 focus:outline-none">제작 과정</a>
+                <a href="#faq" class="hover:text-amber-400 transition-colors focus:text-amber-400 focus:outline-none">FAQ</a>
+            </nav>
+
+            <!-- Kakao Contact / Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <button onclick="copyKakaoId()" class="hidden sm:flex px-4 py-2 bg-kakao hover:bg-yellow-300 text-kakaoDark font-bold text-xs rounded-xl items-center gap-2 transition-all shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+                    <i class="fa-solid fa-comment text-sm"></i>
+                    <span>카톡 문의: <strong class="underline decoration-1">v444</strong></span>
+                </button>
+                <button id="mobileMenuBtn" aria-label="메뉴 열기" aria-expanded="false" onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-        <div class="text-xs text-slate-400 border border-slate-800 bg-slate-900/80 px-3 py-1.5 rounded-full backdrop-blur-sm">
-            <i class="fa-regular fa-clock mr-1.5 text-amber-400"></i>점검 진행 중
+
+        <!-- Mobile Drawer Menu (Optimized) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-6 space-y-4 shadow-2xl absolute w-full left-0 top-20">
+            <a href="#samples" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-amber-400 active:text-amber-500 font-bold py-2 text-lg">샘플 갤러리</a>
+            <a href="#safety" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-amber-400 active:text-amber-500 font-bold py-2 text-lg">안전 제작 원칙</a>
+            <a href="#process" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-amber-400 active:text-amber-500 font-bold py-2 text-lg">제작 과정</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-amber-400 active:text-amber-500 font-bold py-2 text-lg">FAQ</a>
+            <div class="pt-6 border-t border-slate-800 mt-2">
+                <button onclick="copyKakaoId()" class="w-full py-4 bg-kakao text-kakaoDark font-black text-base rounded-xl flex items-center justify-center gap-2 active:bg-yellow-400">
+                    <i class="fa-solid fa-comment"></i>
+                    <span>카카오톡 ID (v444) 복사하기</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="w-full max-w-xl mx-auto px-6 py-8 flex-1 flex flex-col justify-center items-center text-center z-10">
-        
-        <!-- Icon Container -->
-        <div class="relative mb-8">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-tr from-amber-500/20 to-yellow-400/20 rounded-3xl border border-amber-500/30 flex items-center justify-center glow">
-                <i class="fa-solid fa-compass-drafting text-4xl sm:text-5xl text-amber-400 animate-pulse"></i>
-            </div>
-            <div class="absolute -bottom-2 -right-2 bg-kakao text-kakaoDark p-2 rounded-xl text-lg font-bold shadow-lg">
-                <i class="fa-solid fa-wrench"></i>
-            </div>
+    <section class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- 대표 배경 이미지 추가 -->
+        <div class="absolute inset-0 z-0">
+            <img src="/img/gettyimages-940983330.webp" alt="메이드제작나라 촬영용 소품 배경" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/90 to-slate-950"></div>
         </div>
 
-        <!-- Headline -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
-            현재 <span class="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">홈페이지 공사 중</span>입니다
-        </h1>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
-        <!-- Subtext -->
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-10 max-w-md font-light">
-            더 안정적이고 나은 서비스를 제공하기 위해 리뉴얼 작업을 진행하고 있습니다. 궁금하신 사항이나 기타 문의는 아래 카카오톡으로 언제든 연락해 주세요.
-        </p>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-8 backdrop-blur-sm shadow-xl">
+                <i class="fa-solid fa-video text-amber-500 animate-pulse"></i>
+                <span>영화 · 드라마 · 유튜브 촬영 연출 전용 소품</span>
+            </div>
 
-        <!-- KakaoTalk Contact Card -->
-        <div class="w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl backdrop-blur-md mb-6 relative group hover:border-amber-500/50 transition-all duration-300">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                
-                <!-- Kakao Info Left -->
-                <div class="flex items-center gap-3.5 text-left w-full sm:w-auto">
-                    <div class="w-12 h-12 bg-kakao rounded-xl flex items-center justify-center shrink-0 shadow-md">
-                        <i class="fa-solid fa-comment text-kakaoDark text-2xl"></i>
+            <h2 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-tight mb-6">
+                화면의 디테일을 완성하는<br class="hidden sm:block"/>
+                <span class="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
+                    졸업증명서 · 각종 서류 제작
+                </span>
+            </h2>
+
+            <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light mb-10">
+                메이드제작나라은 <strong>실제 법적·행정적 효력이 전혀 없는</strong> 연출 전용 비식별 소품을 제작합니다. 카메라 조도와 렌즈 화각에 맞춘 정밀한 세팅으로 안전하고 완벽한 씬을 연출하세요.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <button onclick="copyKakaoId()" class="w-full sm:w-auto px-10 py-5 bg-kakao hover:bg-yellow-300 text-kakaoDark font-black text-lg rounded-2xl shadow-xl shadow-yellow-500/10 transition-transform transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-comment text-xl"></i>
+                    <span>제작 문의 (카톡: v444)</span>
+                </button>
+            </div>
+            <p class="mt-4 text-xs text-slate-500 font-medium">※ 실제 발급 및 행정기관 제출용 제작은 절대 불가합니다.</p>
+        </div>
+    </section>
+
+    <section id="safety" class="py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-amber-500/5 border border-amber-500/20 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">Compliance & Safety</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">촬영용 소품 안전 제작 4대 원칙</h3>
+                    <p class="text-slate-400 text-sm mt-3">모든 결과물은 오용 및 범죄 악용을 원천 차단하기 위해 엄격한 기준을 따릅니다.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-amber-400 text-2xl mb-4"><i class="fa-solid fa-gavel"></i></div>
+                        <h4 class="text-base font-bold text-white mb-2">법적 효력 절대 불가</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">입학, 취업, 관공서 등 실제 행정 목적 제출용으로는 제작 및 사용이 불가능한 연출 도구입니다.</p>
                     </div>
-                    <div>
-                        <div class="text-xs text-slate-400 font-medium">실시간 카카오톡 문의</div>
-                        <div class="text-xl font-bold text-white tracking-wider flex items-center gap-2">
-                            ID: <span class="text-kakao" id="kakaoId">v444</span>
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-amber-400 text-2xl mb-4"><i class="fa-solid fa-user-shield"></i></div>
+                        <h4 class="text-base font-bold text-white mb-2">실제 정보 미사용</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">실존하는 학교명, 로고, 인장, 실존 인물의 정보 대신 모두 비식별 가공 텍스트로 대체합니다.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-amber-400 text-2xl mb-4"><i class="fa-solid fa-ban"></i></div>
+                        <h4 class="text-base font-bold text-white mb-2">무효 표기 (VOID)</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">카메라 연출을 방해하지 않는 선에서 SAMPLE 및 VOID 워터마크를 필수로 포함시킵니다.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-amber-400 text-2xl mb-4"><i class="fa-solid fa-trash-can"></i></div>
+                        <h4 class="text-base font-bold text-white mb-2">데이터 보안 파기</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">소품 납품 완료 즉시 시안 및 원본 데이터를 영구 삭제하여 외부 유출을 철저히 차단합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="samples" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">Prop Gallery</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">학력 서류 소품 포트폴리오</h3>
+                <p class="text-slate-400 text-sm mt-3">※ 모든 이미지는 비식별화 및 무효 워터마크가 적용된 시뮬레이션입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Sample 1 -->
+                <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-colors">
+                    <div class="h-56 bg-slate-950 flex items-center justify-center p-6 watermark-overlay border-b border-slate-800">
+                        <div class="bg-slate-100 w-full h-full p-4 rounded shadow-lg text-center flex flex-col justify-between text-slate-800">
+                            <h4 class="font-black text-sm tracking-widest border-b border-slate-300 pb-2">졸 업 증 명 서 (가공)</h4>
+                            <div class="text-[8px] space-y-1 text-slate-600 font-serif">
+                                <p>성 명: 김 ○ ○ (비식별)</p>
+                                <p>학과: 영상연출학과</p>
+                                <p class="text-red-500 font-bold mt-2">VOID / NOT FOR OFFICIAL USE</p>
+                            </div>
+                            <div class="text-[7px] text-slate-400 border-t border-slate-300 pt-1">2026. 00. 00 메이드제작나라</div>
                         </div>
                     </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">A4 졸업증명서형</h4>
+                        <p class="text-slate-400 text-xs">교무실 씬, 책상 위 정지샷, 입사 서류 봉투 연출에 적합한 클로즈업 가독성 설계.</p>
+                    </div>
                 </div>
 
-                <!-- Action Buttons -->
-                <div class="flex items-center gap-2 w-full sm:w-auto">
-                    <button id="copyBtn" onclick="copyKakaoId()" class="w-full sm:w-auto px-6 py-2.5 bg-kakao hover:bg-yellow-300 text-kakaoDark font-bold text-sm rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/10">
-                        <i class="fa-regular fa-copy"></i>
-                        <span id="copyBtnText">아이디 복사</span>
+                <!-- Sample 2 -->
+                <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-colors">
+                    <div class="h-56 bg-slate-950 flex items-center justify-center p-6 watermark-overlay border-b border-slate-800">
+                        <div class="bg-amber-50 border-4 border-amber-900/20 w-full h-full p-4 rounded shadow-lg text-center flex flex-col justify-between text-amber-950">
+                            <h4 class="font-black text-base tracking-widest font-serif border-b border-amber-200 pb-2">졸 업 장</h4>
+                            <div class="text-[9px] font-serif leading-relaxed">위 사람은 가공학교 과정을<br/>이수하였음을 증명함.</div>
+                            <div class="text-[8px] font-bold text-red-600 border border-red-500 rounded py-0.5 mx-4">SAMPLE PROP</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">양장/디플로마 졸업장형</h4>
+                        <p class="text-slate-400 text-xs">학위 수여식, 거실 액자 비치 씬을 위한 고급 용지 질감 및 가공 인장 그래픽 적용.</p>
+                    </div>
+                </div>
+
+                <!-- Sample 3 -->
+                <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-amber-500/50 transition-colors">
+                    <div class="h-56 bg-slate-950 flex items-center justify-center p-6 watermark-overlay border-b border-slate-800">
+                        <div class="bg-slate-100 w-full h-full p-4 rounded shadow-lg flex flex-col text-slate-800">
+                            <h4 class="font-bold text-xs border-b border-slate-300 pb-1 text-center">성 적 증 명 서</h4>
+                            <div class="flex-1 mt-2 border border-slate-300 text-[6px] text-slate-700">
+                                <div class="grid grid-cols-3 bg-slate-200 p-1 font-bold"><span>과목명</span><span>학점</span><span>평점</span></div>
+                                <div class="grid grid-cols-3 p-1 border-t border-slate-200"><span>연출기법</span><span>3.0</span><span>A+</span></div>
+                            </div>
+                            <div class="text-center text-[7px] text-red-500 font-bold mt-2">NON-LEGAL DOCUMENT</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2">성적증명서 과목표형</h4>
+                        <p class="text-slate-400 text-xs">서류 대조 및 정밀 검토 장면을 위한 그리드 레이아웃과 모아레 방지 패턴 적용.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">Workflow</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">제작 및 납품 프로세스</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                    <div class="text-amber-500 font-black text-2xl mb-2">01</div>
+                    <h4 class="text-sm font-bold text-white mb-2">카톡 상담</h4>
+                    <p class="text-xs text-slate-400">촬영 콘셉트(학교/기관 씬), 수량, 카메라 거리 및 비식별 가이드 협의.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                    <div class="text-amber-500 font-black text-2xl mb-2">02</div>
+                    <h4 class="text-sm font-bold text-white mb-2">비식별 시안</h4>
+                    <p class="text-xs text-slate-400">가공 텍스트 및 VOID 워터마크가 적용된 시뮬레이션 시안 작업 공유.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                    <div class="text-amber-500 font-black text-2xl mb-2">03</div>
+                    <h4 class="text-sm font-bold text-white mb-2">검수 및 확정</h4>
+                    <p class="text-xs text-slate-400">연출팀 최종 승인. 조명 반사 최소화 용지 및 폰트 두께 미세 조정.</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl">
+                    <div class="text-amber-500 font-black text-2xl mb-2">04</div>
+                    <h4 class="text-sm font-bold text-white mb-2">출력 및 납품</h4>
+                    <p class="text-xs text-slate-400">구겨짐 방지 평판 포장 후 안전 퀵/택배 발송 지원.</p>
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 p-5 rounded-2xl">
+                    <div class="text-amber-400 font-black text-2xl mb-2">05</div>
+                    <h4 class="text-sm font-bold text-white mb-2">데이터 폐기</h4>
+                    <p class="text-xs text-slate-400">납품 완료 즉시 원본 보안 삭제 (필요시 내부 검수용 폐기 확인 지원).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">FAQ</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">자주 묻는 질문</h3>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+                
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-slate-200 hover:text-amber-400 flex justify-between items-center focus:outline-none">
+                        <span>실제 행정기관이나 취업·입학 제출용으로 제작할 수 있나요?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
                     </button>
+                    <div class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
+                        <strong>아니요. 본 서비스의 결과물은 영화, 드라마, 광고 등 연출 전용 소품입니다.</strong> 실제 졸업증명이나 학력 증빙 목적으로 사용할 수 없으며, 위조 목적이나 실제 행정 제출용 제작은 일절 제공하지 않습니다.
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-slate-200 hover:text-amber-400 flex justify-between items-center focus:outline-none">
+                        <span>실제 존재하는 학교명이나 본인 실명으로 제작할 수 있나요?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
+                        실제 학교나 기관의 공식 문서로 오인될 수 있는 형태의 제작은 진행하지 않습니다. 카메라 연출 목적에 맞춰 가공된 학교명, 가명 인물명, 난수 번호 등 <strong>비식별 정보만을 사용하는 방식</strong>으로 제작해 드립니다.
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-slate-200 hover:text-amber-400 flex justify-between items-center focus:outline-none">
+                        <span>화면에 잡힐 때 거슬리지 않게 VOID 표기를 지울 수 있나요?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
+                        실제 서류와의 혼동 및 남용을 방지하기 위해 <strong>무효 표기(VOID / SAMPLE)는 반드시 포함</strong>되어야 합니다. 다만 촬영 각도와 조명에 맞춰 너무 튀지 않고 자연스럽게 녹아들도록 농도와 위치를 전문적으로 조율해 드립니다.
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left font-bold text-slate-200 hover:text-amber-400 flex justify-between items-center focus:outline-none">
+                        <span>납품 후 파일은 어떻게 관리되나요?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-500 transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-5 text-xs text-slate-400 leading-relaxed border-t border-slate-800 pt-4">
+                        보안 컴플라이언스 기준에 따라, 납품이 완료된 즉시 고객 시안 및 원본 출력 데이터는 <strong>서버에서 영구 삭제</strong>됩니다. 데이터 재사용이나 외부 유출을 원천 차단합니다.
+                    </div>
                 </div>
 
             </div>
         </div>
+    </section>
 
-        <!-- Toast Alert Notification -->
-        <div id="toast" class="opacity-0 transition-opacity duration-300 pointer-events-none bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs px-4 py-2 rounded-full flex items-center gap-2">
-            <i class="fa-solid fa-circle-check"></i>
-            <span>카카오톡 아이디(v444)가 복사되었습니다!</span>
+    <section class="py-16 bg-slate-900/80 border-t border-slate-800 text-center">
+        <div class="max-w-2xl mx-auto px-4">
+            <h3 class="text-xl font-bold text-white mb-4">가장 안전하고 디테일한 소품 제작 파트너</h3>
+            <button onclick="copyKakaoId()" class="w-full sm:w-auto px-8 py-4 bg-kakao hover:bg-yellow-300 text-kakaoDark font-black text-sm rounded-xl shadow-lg transition-transform transform active:scale-95 flex items-center justify-center gap-2 mx-auto">
+                <i class="fa-solid fa-comment"></i> 메이드제작나라 카톡 아이디 복사 (v444)
+            </button>
         </div>
+    </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="w-full max-w-4xl mx-auto px-6 py-8 text-center text-xs text-slate-500 border-t border-slate-900 z-10">
-        <p>© <span id="currentYear"></span> All rights reserved. 이용에 불편을 드려 죄송합니다.</p>
+    <footer class="bg-slate-950 text-slate-500 text-xs py-10 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                <div class="font-bold text-sm text-slate-400">메이드제작나라</div>
+                <div class="flex gap-4">
+                    <span>카카오톡 문의: v444</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span>위치: 서울특별시 마포구 연남동 (홍대/합정 제작 지원)</span>
+                </div>
+            </div>
+            <div class="bg-slate-900/50 p-4 rounded-xl border border-slate-900 mb-6 leading-relaxed text-[11px] text-slate-400 text-justify">
+                <strong>법적 고지:</strong> 본 웹사이트의 모든 서비스 및 결과물은 영상/방송/연출을 위한 가공 소품(Props) 제작에 한정됩니다. 실제 입학, 취업, 행정 업무 등에 사용되는 서류의 위조, 변조, 발급 대행은 일절 진행하지 않으며 관련 문의도 거절합니다. 모든 연출 소품에는 비식별 처리 및 VOID/SAMPLE 표기가 필수적으로 적용됩니다.
+            </div>
+            <div class="text-center text-[10px]">
+                &copy; 2026 메이드제작나라. All rights reserved. (SEO & GEO Optimized)
+            </div>
+        </div>
     </footer>
 
-    <!-- Copy Script -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-emerald-500 text-slate-950 font-bold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span>카카오톡 아이디(v444)가 복사되었습니다!</span>
+    </div>
+
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
+        // Kakao ID Copy Logic
         function copyKakaoId() {
-            const kakaoId = "v444";
-            
-            // Clipboard Copy logic
-            navigator.clipboard.writeText(kakaoId).then(() => {
-                const copyBtnText = document.getElementById('copyBtnText');
-                const toast = document.getElementById('toast');
-                
-                // Button UI feedback
-                copyBtnText.textContent = "복사 완료!";
-                
-                // Toast Feedback
-                toast.classList.remove('opacity-0');
-                toast.classList.add('opacity-100');
+            const kakaoId = 'v444';
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(kakaoId).then(showToast).catch(() => legacyCopy(kakaoId));
+            } else {
+                legacyCopy(kakaoId);
+            }
+        }
 
-                setTimeout(() => {
-                    copyBtnText.textContent = "아이디 복사";
-                    toast.classList.remove('opacity-100');
-                    toast.classList.add('opacity-0');
-                }, 2500);
-            }).catch(err => {
-                alert('복사에 실패했습니다. 아이디 v444를 직접 입력해 주세요.');
+        function legacyCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast();
+            } catch (err) {
+                console.error('Fallback Copy Failed', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('mobileMenuBtn');
+            const isHidden = menu.classList.contains('hidden');
+            
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Accordion Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all first
+            document.querySelectorAll('#faqAccordion > div').forEach(item => {
+                item.querySelector('div').classList.add('hidden');
+                item.querySelector('i').classList.remove('rotate-180');
             });
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
         }
     </script>
 </body>
