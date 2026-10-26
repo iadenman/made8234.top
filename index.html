@@ -139,8 +139,8 @@
         </div>
     </header>
 
-   <!-- Hero Section -->
-    <section class="flex-grow flex items-center justify-center pt-[50px] pb-16 px-4 sm:px-6 lg:px-8">
+  <!-- Hero Section (상단 패딩 50px 적용) -->
+    <section class="flex-grow flex items-center justify-center pb-16 px-4 sm:px-6 lg:px-8" style="margin-top:50px">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
             
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-8 backdrop-blur-sm shadow-xl">
@@ -159,7 +159,7 @@
                 메이드제작나라은 <strong>안전한 시스템을 기반으로</strong> 차원이 다른 디테일의 각종 서류(졸업증명서, 성적증명서, 거래내역서 등)를 제작합니다. 확실한 품질로 최고의 만족을 경험해 보세요.
             </p>
 
-            <!-- 👉 카카오톡 & 텔레그램 한 줄(2분할 가로 배치) 영역 -->
+            <!-- 👉 카카오톡 & 텔레그램 한 줄(2분할 가로 배치) 영역 + 각각의 안내 멘트 추가 -->
             <div class="max-w-xl mx-auto space-y-4 text-left">
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -179,12 +179,15 @@
                             </div>
                         </div>
                         
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button onclick="copyKakaoId()" class="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs rounded-xl shadow-md shadow-amber-500/20 transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-95 cursor-pointer">
                                 <i class="fa-regular fa-copy"></i>
                                 <span>ID 복사하기</span>
                             </button>
-                            <p class="text-[10px] text-slate-400 text-center">ID 검색 후 문의</p>
+                            <!-- 카카오톡 개별 안내 멘트 -->
+                            <p class="text-[11px] text-slate-400 leading-relaxed break-keep bg-slate-950/40 p-2.5 rounded-lg border border-slate-800/60 text-center">
+                                💡 카카오톡 앱 실행 → 친구 탭 상단 '친구 추가(ID로 추가)'에서 <strong class="text-amber-400 font-bold">ace888</strong> 검색 후 메시지를 남겨주세요.
+                            </p>
                         </div>
                     </div>
 
@@ -203,20 +206,18 @@
                             </div>
                         </div>
                         
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <a href="https://t.me/ace8887" target="_blank" class="w-full py-2.5 bg-[#2AABEE] hover:bg-[#2298D6] text-white font-black text-xs rounded-xl shadow-md shadow-[#2AABEE]/20 transition-all duration-150 flex items-center justify-center gap-1.5 active:scale-95">
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>상담 바로가기</span>
                             </a>
-                            <p class="text-[10px] text-slate-400 text-center">버튼 클릭 시 바로 연결</p>
+                            <!-- 텔레그램 개별 안내 멘트 -->
+                            <p class="text-[11px] text-slate-400 leading-relaxed break-keep bg-slate-950/40 p-2.5 rounded-lg border border-slate-800/60 text-center">
+                                💡 텔레그램 앱이 설치되어 있다면 위 버튼을 눌러 바로 상담을 시작하실 수 있습니다. (또는 <strong class="text-[#2AABEE] font-bold">ace8887</strong> 검색)
+                            </p>
                         </div>
                     </div>
 
-                </div>
-
-                <!-- 안내 박스 -->
-                <div class="text-center text-[11px] sm:text-[12px] text-slate-400 bg-slate-900/60 border border-slate-800 px-4 py-3 rounded-xl leading-relaxed">
-                    💡 <strong>ace888</strong>(카카오톡) 또는 <strong>ace8887</strong>(텔레그램)로 편하신 채널을 통해 문의해 주세요.
                 </div>
 
             </div>
