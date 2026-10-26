@@ -139,15 +139,9 @@
         </div>
     </header>
 
-    <section class="relative pt-36 pb-20 md:pt-44 md:pb-32 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="/img/gettyimages-940983330.webp" alt="메이드제작나라 배경" class="w-full h-full object-cover opacity-20" onerror="this.src='https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=2071&auto=format&fit=crop';">
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/90 to-slate-950"></div>
-        </div>
-
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+   <!-- Hero Section -->
+    <section class="flex-grow flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
             
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold mb-8 backdrop-blur-sm shadow-xl">
                 <i class="fa-solid fa-bolt text-amber-500"></i>
@@ -155,7 +149,7 @@
             </div>
 
             <h2 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-tight mb-6">
-                최고의 디테일로 완성하는<br class="hidden sm:block"/>
+                최고의 디테일로 완성하는<br class="hidden sm:block">
                 <span class="bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 bg-clip-text text-transparent">
                     졸업증명서 · 각종 서류 제작
                 </span>
@@ -164,13 +158,61 @@
             <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-light mb-10">
                 메이드제작나라은 <strong>안전한 시스템을 기반으로</strong> 차원이 다른 디테일의 각종 서류(졸업증명서, 성적증명서, 거래내역서 등)를 제작합니다. 확실한 품질로 최고의 만족을 경험해 보세요.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a href="https://c.iadenoekzx4527.workers.dev/" target="_blank" class="w-full sm:w-auto px-10 py-5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-lg rounded-2xl shadow-xl shadow-amber-500/20 transition-transform transform hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-headphones-simple text-xl"></i>
-                    <span>고객센터 1:1 문의하기</span>
-                </a>
+
+            <!-- 👉 수정된 카카오톡 및 텔레그램 고객센터 연동 영역 -->
+            <div class="max-w-md mx-auto space-y-4 text-left">
+                
+                <!-- 메인 고객센터 카드 박스 -->
+                <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 cs-card space-y-6 backdrop-blur-md">
+                    
+                    <!-- 카카오톡 ID Display & Copy -->
+                    <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-5 flex flex-col items-center justify-center space-y-3">
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-solid fa-comment text-amber-400 text-base"></i>
+                            <span class="text-xs text-slate-400 font-bold">카카오톡 ID</span>
+                        </div>
+                        <span class="text-3xl sm:text-4xl font-black text-white tracking-wider" id="kakaoIdText">ace888</span>
+                        
+                        <button onclick="copyKakaoId()" class="w-full mt-2 py-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-sm rounded-xl shadow-lg shadow-amber-500/20 transition-all duration-150 flex items-center justify-center gap-2 active:scale-95 cursor-pointer">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>카카오톡 ID 복사하기</span>
+                        </button>
+                    </div>
+
+                    <div class="text-center text-[11px] sm:text-[12px] text-slate-400 bg-slate-950/40 border border-slate-800/80 px-3.5 py-3 rounded-xl leading-relaxed break-keep">
+                        💡 카카오톡 앱 실행 → 친구 추가(ID로 추가)에서 <strong class="text-amber-400 font-bold">ace888</strong> 검색 후 문의해주세요.
+                    </div>
+
+                    <div class="relative flex py-1 items-center">
+                        <div class="flex-grow border-t border-slate-800"></div>
+                        <span class="flex-shrink-0 mx-4 text-slate-500 text-xs font-medium">또는</span>
+                        <div class="flex-grow border-t border-slate-800"></div>
+                    </div>
+
+                    <!-- 텔레그램 ID Display & Link -->
+                    <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-5 flex flex-col items-center justify-center space-y-3">
+                        <div class="flex items-center gap-1.5">
+                            <i class="fa-brands fa-telegram text-[#2AABEE] text-lg"></i>
+                            <span class="text-xs text-slate-400 font-bold">텔레그램 ID</span>
+                        </div>
+                        <span class="text-3xl sm:text-4xl font-black text-white tracking-wider" id="telegramIdText">ace8887</span>
+                        
+                        <a href="https://t.me/ace8887" target="_blank" class="w-full mt-2 py-3 bg-[#2AABEE] hover:bg-[#2298D6] text-white font-black text-sm rounded-xl shadow-lg shadow-[#2AABEE]/20 transition-all duration-150 flex items-center justify-center gap-2 active:scale-95">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>텔레그램 상담 바로가기</span>
+                        </a>
+                    </div>
+
+                    <div class="text-center text-[11px] sm:text-[12px] text-slate-400 bg-slate-950/40 border border-slate-800/80 px-3.5 py-3 rounded-xl leading-relaxed break-keep">
+                        💡 텔레그램 앱이 있다면 위 버튼을 눌러 바로 연결하실 수 있습니다. (검색 ID: <strong class="text-[#2AABEE] font-bold">ace8887</strong>)
+                    </div>
+
+                </div>
+
             </div>
-            <p class="mt-4 text-xs text-slate-500 font-medium">※ 빠르고 정확한 실시간 상담이 가능합니다.</p>
+            <!-- // 수정 완료 영역 -->
+
+            <p class="mt-6 text-xs text-slate-500 font-medium">※ 빠르고 정확한 실시간 상담이 가능합니다.</p>
         </div>
     </section>
 
@@ -315,6 +357,71 @@
         </div>
     </footer>
 
+    <!-- Copy Alert Modal (Kakao) -->
+    <div id="copyModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-200">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 max-w-xs w-full mx-4 shadow-2xl text-center space-y-3.5">
+            <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto text-lg border border-amber-500/20">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="space-y-1">
+                <h4 class="text-sm font-bold text-white">복사 완료</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                    카카오톡 아이디(<strong class="text-amber-400">ace888</strong>)가 복사되었습니다.<br>
+                    카카오톡에서 검색 후 문의해 주세요.
+                </p>
+            </div>
+            <button onclick="closeCopyModal()" class="w-full py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold rounded-xl transition-colors cursor-pointer">
+                확인
+            </button>
+        </div>
+    </div>
+
+    <!-- Clipboard Script -->
+    <script>
+        function copyKakaoId() {
+            const kakaoId = 'ace888';
+            
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(kakaoId).then(showCopyModal).catch(() => fallbackCopy(kakaoId));
+            } else {
+                fallbackCopy(kakaoId);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCopyModal();
+            } catch (e) {
+                console.error('Copy failed');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showCopyModal() {
+            const modal = document.getElementById('copyModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeCopyModal() {
+            const modal = document.getElementById('copyModal');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+    </script>
+    
     <script>
         // Mobile Menu Toggle
         function toggleMobileMenu() {
